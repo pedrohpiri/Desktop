@@ -1,0 +1,128 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #181818;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    width: 100%;
+    background-color: #1c1c1c;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #e50914;
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #e50914;
+}
+
+/* Seção de Trailers */
+.trailer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Contêiner do vídeo */
+.trailer {
+    position: relative;
+    width: 800px;
+    max-width: 90vw;
+    padding: 20px;
+    background-color: #202020;
+    border-radius: 10px;
+    margin: 30px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilo do iframe do vídeo */
+.trailer iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Overlay para o título e duração */
+
+
+/* Informações do Trailer */
+.info-container {
+    text-align: center;
+    margin-top: 15px;
+    background-color: #282828;
+    padding: 15px;
+    border-radius: 8px;
+    color: #b3b3b3;
+}
+
+/* Botão Favoritar */
+button[onclick="toggleFavorite()"] {
+    background-color: #333;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+button[onclick="toggleFavorite()"]:hover {
+    background-color: #e50914;
+}
+
+/* Botões de Navegação Inferior */
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.navigation-buttons button {
+    background-color: #e50914;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.navigation-buttons button:hover {
+    background-color: #b20710;
+}

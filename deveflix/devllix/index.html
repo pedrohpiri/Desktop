@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devflix</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Devflix</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="favorites.html">Minha Lista</a></li>
+            </ul>
+        </nav>
+        <input type="text" id="search-bar" placeholder="Buscar trailers..." oninput="searchTrailers()" />
+    </header>
+
+    <main>
+        <section class="trailer-section">
+            <div class="trailer">
+                <iframe id="trailer-iframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                
+                <div class="overlay">
+                    <h2 id="overlay-title"></h2>
+                    <p id="overlay-duration">2:09</p>
+                </div>
+                
+                <div class="info-container">
+                    <h2 id="trailer-title">Trailer Título</h2>
+                    <p id="trailer-description">Descrição do trailer aqui...</p>
+                    <button onclick="toggleFavorite()">Favoritar</button>
+                    
+                    <div class="navigation-buttons">
+                        <button onclick="previousTrailer()">Anterior</button>
+                        <button onclick="nextTrailer()">Próximo</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
