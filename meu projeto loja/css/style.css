@@ -1,0 +1,452 @@
+/* Reset básico para tirar margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo Padrão (Modo Claro - Ambiente Escuro) */
+body {
+    background-color: #1e1e1e; /* Fundo escuro */
+    color: #f1f1f1; /* Texto claro */
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Cabeçalho e Rodapé */
+header, footer {
+    background-color: #333; /* Fundo mais escuro */
+    color: #ffffff;
+}
+
+header nav a, footer p {
+    color: #f1f1f1;
+}
+
+#mode-toggle {
+    color: #ffffff; /* Ícone de alternância claro */
+}
+
+/* Seções com fundo escuro e bordas claras */
+#banner, #destaques, #produtos, #sobre, #contato {
+    background-color: #2a2a2a; /* Fundo escuro para seções */
+    box-shadow: 0 1px 4px rgba(255, 255, 255, 0.1); /* Sombra clara */
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 1rem 0;
+}
+
+/* Estilo dos Títulos */
+h1, h2, h3, h4, h5, h6 {
+    color: #e0e0e0;
+}
+
+/* Estilo dos Produtos */
+.produto {
+    background-color: #333; /* Fundo do produto escuro */
+    color: #f1f1f1; /* Texto claro */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Sombra clara */
+}
+
+/* Estilo dos Botões */
+button, .produto button, #form-contato button {
+    background-color: #ff6b6b;
+    color: #ffffff;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover, .produto button:hover, #form-contato button:hover {
+    background-color: #ff5252;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Formulário de Contato */
+#form-contato input, #form-contato textarea {
+    background-color: #444;
+    color: #f1f1f1;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .produtos {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Modo Escuro (Ambiente Claro) */
+body.dark-mode {
+    background-color: #f7f9fc; /* Fundo claro */
+    color: #333; /* Texto escuro */
+}
+
+header.dark-mode, footer.dark-mode {
+    background-color: #f0f0f0; /* Fundo claro */
+    color: #222;
+}
+
+header.dark-mode nav a, footer.dark-mode p {
+    color: #333;
+}
+
+#mode-toggle.dark-mode {
+    color: #333; /* Ícone de alternância escuro */
+}
+
+/* Seções com fundo claro e bordas escuras */
+body.dark-mode #banner, 
+body.dark-mode #destaques, 
+body.dark-mode #produtos, 
+body.dark-mode #sobre, 
+body.dark-mode #contato {
+    background-color: #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo dos Títulos no Modo Escuro */
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6 {
+    color: #222;
+}
+
+/* Estilo dos Produtos no Modo Escuro */
+body.dark-mode .produto {
+    background-color: #ffffff;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo dos Botões no Modo Escuro */
+body.dark-mode button, 
+body.dark-mode .produto button, 
+body.dark-mode #form-contato button {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+body.dark-mode button:hover, 
+body.dark-mode .produto button:hover, 
+body.dark-mode #form-contato button:hover {
+    background-color: #0056b3;
+}
+
+/* Formulário de Contato no Modo Escuro */
+body.dark-mode #form-contato input, 
+body.dark-mode #form-contato textarea {
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #ccc;
+}
+/* Adicionar espaçamento entre as seções */
+section {
+    margin-bottom: 2rem;
+}
+
+/* Ajuste de espaçamento para os títulos */
+h2, h3 {
+    margin-bottom: 1rem;
+}
+/* Aplicar bordas arredondadas e sombra uniforme */
+#banner, #destaques, #produtos, #sobre, #contato {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+button {
+    display: inline-block;
+    margin: 0.5rem auto;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.produtos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.produto {
+    width: 200px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+#form-contato {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#form-contato input, #form-contato textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333; /* Para o modo claro com ambiente escuro */
+    color: #f1f1f1;
+}
+body, h1, h2, h3, h4, h5, h6, p, a, button {
+    text-align: center;
+}
+/* Centralizar o texto em todas as seções principais */
+#banner, #destaques, #produtos, #sobre, #contato, footer, header nav {
+    text-align: center;
+}
+#form-contato {
+    max-width: 400px;
+    margin: 0 auto; /* Centralizar o formulário */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+button {
+    display: inline-block;
+    margin: 0.5rem auto; /* Centralizar o botão */
+}
+#mode-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: inherit; /* Herdar a cor de acordo com o tema */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#mode-toggle:hover {
+    transform: scale(1.1); /* Aumenta um pouco o botão ao passar o mouse */
+}
+/* Estilo padrão do botão (ambiente escuro - modo claro) */
+#mode-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #ffffff; /* Fundo claro */
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #000000; /* Ícone preto */
+    border-radius: 50%; /* Botão circular */
+    padding: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+#mode-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Modo escuro (ambiente claro) - botão com fundo escuro e ícone claro */
+body.dark-mode #mode-toggle {
+    background-color: #333333; /* Fundo escuro */
+    color: #ffffff; /* Ícone branco */
+}
+/* Estilo para o Cabeçalho */
+header {
+    padding: 1.5rem 2rem; /* Espaçamento interno do cabeçalho */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilo para o título <h1> */
+header h1 {
+    font-size: 2rem; /* Aumentar o tamanho da fonte */
+    margin: 1rem 0; /* Espaçamento acima e abaixo */
+    color: #ffffff; /* Mantenha o texto claro */
+}
+
+/* Estilo para os links de navegação */
+header nav {
+    display: flex;
+    gap: 1.5rem; /* Espaçamento entre os links */
+    margin-top: 0.5rem; /* Espaço entre o <h1> e os links */
+}
+
+header nav a {
+    font-size: 1.2rem; /* Aumentar o tamanho da fonte dos links */
+    text-decoration: none;
+    color: inherit; /* Herdar a cor do tema */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #ff6b6b; /* Cor de destaque ao passar o mouse */
+}
+/* Estilo do Rodapé */
+footer {
+    font-size: 1rem; /* Aumenta o tamanho da fonte no rodapé */
+    padding: 1.5rem;
+    background-color: #222; /* Mantenha o fundo escuro */
+    color: #ffffff;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5rem 0; /* Margem em cima e embaixo para espaçamento */
+    font-size: 1.1rem; /* Ajuste do tamanho da fonte */
+}
+#whatsapp-link {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 50px;
+    height: 50px;
+    z-index: 1000; /* Garante que ele fique sobre outros elementos */
+    transition: transform 0.3s ease;
+}
+
+#whatsapp-link img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Torna o ícone circular */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+#whatsapp-link:hover {
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+}
+/* Estilo para a seção de produtos */
+.produtos {
+    display: flex;
+    gap: 1.5rem; /* Espaçamento entre os produtos */
+    justify-content: center; /* Centralizar os produtos na seção */
+}
+
+/* Estilo para os cartões de produto */
+.produto {
+    width: 200px; /* Largura fixa para todos os cartões de produto */
+    min-height: 350px; /* Altura mínima para uniformizar os cartões */
+    background-color: #333333; /* Fundo para destaque */
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para imagens dos produtos */
+.produto img {
+    width: 100%; /* Ocupa toda a largura do contêiner */
+    height: 150px; /* Altura fixa */
+    object-fit: cover; /* Ajuste para que a imagem se encaixe sem distorção */
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo para o texto e botão no cartão de produto */
+.produto h4 {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+.produto p {
+    font-size: 1rem;
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+}
+
+.produto button {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    background-color: #ff6b6b;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.produto button:hover {
+    background-color: #ff5252;
+}
+
+/* Estilo para a seção de produtos */
+.produtos {
+    display: flex;
+    gap: 2rem; /* Maior espaçamento entre os produtos */
+    justify-content: center; /* Centralizar os produtos na seção */
+}
+
+/* Estilo para os cartões de produto */
+.produto {
+    width: 250px; /* Largura aumentada para uma visualização melhor */
+    min-height: 400px; /* Altura mínima aumentada */
+    background-color: #333333; /* Fundo para destaque */
+    border-radius: 8px;
+    padding: 1.5rem; /* Aumentar o padding para dar mais espaço interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para imagens dos produtos */
+.produto img {
+    width: 100%; /* Ocupa toda a largura do contêiner */
+    height: 200px; /* Altura aumentada para melhor visibilidade */
+    object-fit: cover; /* Ajuste para que a imagem se encaixe sem distorção */
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo para o texto e botão no cartão de produto */
+.produto h4 {
+    font-size: 1.2rem; /* Aumentar tamanho da fonte do nome do produto */
+    margin: 0.5rem 0;
+}
+
+.produto p {
+    font-size: 1.1rem; /* Aumentar o tamanho da fonte do preço */
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+}
+
+.produto button {
+    width: 100%;
+    padding: 0.7rem 1rem; /* Aumentar o padding para botões maiores */
+    font-size: 1rem; /* Aumentar tamanho da fonte do botão */
+    background-color: #ff6b6b;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.produto button:hover {
+    background-color: #ff5252;
+}

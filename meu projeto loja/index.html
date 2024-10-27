@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rz Smartcel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Rz Smartcel</h1>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+        <button id="mode-toggle">🌞</button> <!-- Botão de alternância de modo -->
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main id="inicio">
+        
+        <!-- Seção de Banner/Destaque -->
+        <section id="banner">
+            <h2>Bem-vindo à nossa Loja de Revenda de Celulares</h2>
+            <p>Apple e Xiaomi - Qualidade e Confiança</p>
+            <button onclick="window.location.href='#contato'">Entre em Contato</button>
+        </section>
+
+        <!-- Seção de Destaques -->
+        <section id="destaques">
+            <h3>Produtos em Destaque</h3>
+            <div class="produtos">
+                <!-- Produto Exemplo 1 -->
+                <div class="produto">
+                    <img src="./images/16pro.jpg" alt="iPhone 12">
+                    <h4>iPhone 12</h4>
+                    <p>R$ 3.999,00</p>
+                    <button onclick="window.location.href='#contato'">Entre em Contato</button>
+                </div>
+                <!-- Produto Exemplo 2 -->
+                <div class="produto">
+                    <img src="./images/16promax.jpeg" alt="Xiaomi Mi 11">
+                    <h4>Xiaomi Mi 11</h4>
+                    <p>R$ 2.999,00</p>
+                    <button onclick="window.location.href='#contato'">Entre em Contato</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Produtos -->
+        <section id="produtos">
+            <h3>Nossos Produtos</h3>
+
+            <!-- Categoria Apple -->
+            <div class="categoria">
+                <h4>Apple</h4>
+                <div class="produtos">
+                    <!-- Produto Apple 1 -->
+                    <div class="produto">
+                        <img src="./images/applewatch.jpeg" alt="iPhone 12">
+                        <h4>Apple Watch</h4>
+                        <p>R$ 3.999,00</p>
+                        <button onclick="window.location.href='#contato'">Entre em Contato</button>
+                    </div>
+                    <!-- Produto Apple 2 -->
+                    <div class="produto">
+                        <img src="./images/mackbook.jpeg" alt="iPhone 13">
+                        <h4>Mackbook</h4>
+                        <p>R$ 4.499,00</p>
+                        <button onclick="window.location.href='#contato'">Entre em Contato</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoria Xiaomi -->
+            <div class="categoria">
+                <h4>Xiaomi</h4>
+                <div class="produtos">
+                    <!-- Produto Xiaomi 1 -->
+                    <div class="produto">
+                        <img src="./images/xiaomi1.png" alt="Xiaomi Mi 11">
+                        <h4>Xiaomi</h4>
+                        <p>R$ 2.999,00</p>
+                        <button onclick="window.location.href='#contato'">Entre em Contato</button>
+                    </div>
+                    <!-- Produto Xiaomi 2 -->
+                    <div class="produto">
+                        <img src="./images/ipad.jpg" alt="Xiaomi Redmi Note 10">
+                        <h4>Ipad</h4>
+                        <p>R$ 1.899,00</p>
+                        <button onclick="window.location.href='#contato'">Entre em Contato</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre a Loja -->
+        <section id="sobre">
+            <h3>Sobre a Loja</h3>
+            <p>Somos uma loja especializada na revenda de celulares Apple e Xiaomi, oferecendo produtos de alta
+                qualidade com garantia e atendimento personalizado.</p>
+            <p>Nossa missão é proporcionar a melhor experiência de compra, com preços competitivos e um serviço
+                de suporte pós-venda de excelência.</p>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contato">
+            <h3>Entre em Contato</h3>
+            <p>Tem alguma dúvida? Fale conosco!</p>
+
+            <div class="contato-info">
+                <p><strong>Endereço:</strong> Rua Exemplo, 123 - Cidade/UF</p>
+                <p><strong>Telefone:</strong> (00) 1234-5678</p>
+                <p><strong>Email:</strong> contato@lojarevenda.com</p>
+                
+            </div>
+
+            <form id="form-contato">
+                <input type="text" name="nome" placeholder="Seu Nome" required>
+                <input type="email" name="email" placeholder="Seu Email" required>
+                <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Loja de Revenda de Celulares</p>
+    </footer>
+
+    <!-- Link para contato via WhatsApp no canto inferior direito -->
+    <a href="https://wa.me/551234567890" target="_blank" id="whatsapp-link">
+        <img src="./images/whatsapp-logo.png" alt="WhatsApp" />
+    </a>
+
+    <!-- JavaScript para alternância de modo claro e escuro -->
+    <script>
+        const toggleButton = document.getElementById('mode-toggle');
+        const body = document.body;
+        const header = document.querySelector('header');
+        const footer = document.querySelector('footer');
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            header.classList.toggle('dark-mode');
+            footer.classList.toggle('dark-mode');
+            toggleButton.classList.toggle('dark-mode');
+
+            // Alterna o ícone do botão
+            if (body.classList.contains('dark-mode')) {
+                toggleButton.textContent = '🌜'; // Lua para modo escuro
+            } else {
+                toggleButton.textContent = '🌞'; // Sol para modo claro
+            }
+        });
+    </script>
+
+</body>
+
+</html>
