@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Metadados e informações essenciais -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+    <!-- Link para estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <!-- Cabeçalho com o título da página -->
+    <header>
+        <img src="./conversor.png" alt="Ícone do Conversor de Moedas" >
+        <h1>Conversor de Moedas</h1> <!-- Título principal -->
+    </header>
+
+    <!-- Seção principal do conversor de moedas -->
+    <main>
+        <!-- Contêiner do formulário para organizar os elementos -->
+        <div class="converter-container">
+            <!-- Seleção da moeda de origem -->
+            <label for="moedaOrigem">De:</label> <!-- Rótulo para a moeda de origem -->
+            <select id="moedaOrigem">
+                <option value="USD">Dólar Americano (USD)</option>
+                <option value="EUR">Euro (EUR)</option>
+                <option value="BRL">Real Brasileiro (BRL)</option>
+                <!-- Outras moedas fictícias podem ser adicionadas aqui -->
+            </select>
+
+            <!-- Seleção da moeda de destino -->
+            <label for="moedaDestino">Para:</label> <!-- Rótulo para a moeda de destino -->
+            <select id="moedaDestino">
+                <option value="BRL">Real Brasileiro (BRL)</option>
+                <option value="USD">Dólar Americano (USD)</option>
+                <option value="EUR">Euro (EUR)</option>
+            </select>
+
+            <!-- Campo de entrada para o valor a ser convertido -->
+            <label for="valor">Valor:</label> <!-- Rótulo para o campo de entrada -->
+            <input type="number" id="valor" placeholder="Digite o valor" required onkeypress="verificarEnter(event)">
+
+            <!-- Botão para acionar a conversão -->
+            <button onclick="converter()">Converter</button> <!-- Botão que ativa a função de conversão -->
+
+            <!-- Área de exibição do resultado -->
+            <h3 id="resultado">Resultado: </h3> <!-- Onde o valor convertido será exibido -->
+        </div>
+    </main>
+</body>
+</html>
