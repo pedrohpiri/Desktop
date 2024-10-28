@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja de Carros</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Seção de Introdução -->
+  <header class="hero">
+    <h1>Encontre o Carro dos Seus Sonhos</h1>
+    <p>A melhor seleção de veículos para você</p>
+    <button>Saiba Mais</button>
+  </header>
+
+  <!-- Seção Sobre Nós -->
+  <section class="sobre">
+    <h2>Sobre Nós</h2>
+    <p>Com anos de experiência, nossa missão é oferecer os melhores veículos com o atendimento que você merece.</p>
+  </section>
+
+  <section class="catalogo">
+    <h2>Catálogo de Veículos</h2>
+    <div class="card-container">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="./pexels-mikebirdy-116675.jpg" alt="Carro 1">
+        <h3>Modelo A</h3>
+        <p>R$ 75.000</p>
+        <p>Compacto, econômico e ideal para a cidade.</p>
+        <button>Mais Detalhes</button>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="./pexels-mikebirdy-170811.jpg" alt="Carro 2">
+        <h3>Modelo B</h3>
+        <p>R$ 120.000</p>
+        <p>Conforto e tecnologia para sua família.</p>
+        <button>Mais Detalhes</button>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="./pexels-aaronmcurtis-119435.jpg" alt="Carro 3">
+        <h3>Modelo C</h3>
+        <p>R$ 95.000</p>
+        <p>Estilo e potência para os amantes da velocidade.</p>
+        <button>Mais Detalhes</button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Seção de Depoimentos e Contato -->
+  <section class="contato">
+    <h2>Depoimentos</h2>
+    <p>"Excelente atendimento e variedade de veículos!" - Cliente Satisfeito</p>
+    <h2>Contato</h2>
+    <p>Endereço da loja, telefone e links para redes sociais.</p>
+  </section>
+
+  <a href="https://wa.me/SEUNUMERO?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20veículos" target="_blank">
+    <img src="./whatsapp_2504957.png" alt="WhatsApp" style="width: 50px; height: 50px;">
+  </a>
+  
+
+  <footer>
+    <p>Loja de Carros © 2023 - Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    // URL do WhatsApp com o número e a mensagem padrão
+    const whatsappUrl = "https://wa.me/+5599999999999?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20veículos";
+  
+    // Função que redireciona para o WhatsApp
+    function redirectToWhatsApp() {
+      window.open(whatsappUrl, "_blank");
+    }
+  
+    // Seleciona todos os botões da página
+    const buttons = document.querySelectorAll("button");
+  
+    // Adiciona o evento de clique a cada botão
+    buttons.forEach(button => {
+      button.addEventListener("click", redirectToWhatsApp);
+    });
+  </script>
+  
+</body>
+</html>
+

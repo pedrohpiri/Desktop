@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Vendas Exclusiva | Nossa Loja</title>
+
+    <!-- Meta Tags para SEO -->
+    <meta name="description"
+        content="Ofertas exclusivas em produtos selecionados. Aproveite descontos especiais em nossa loja online!">
+    <meta name="keywords" content="loja, produtos, ofertas, descontos, vendas online">
+    <meta name="author" content="Sua Empresa">
+
+    <!-- Links para CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Link para Fonte do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- Cabeçalho da Página -->
+    <header>
+        <div class="header-content">
+            <h1>Bem-vindo à Nossa Loja</h1>
+            <p>Ofertas exclusivas em produtos selecionados! Não perca as melhores oportunidades para economizar.</p>
+            <button onclick="mostrarModal()">🎉 Oferta Especial 🎉</button>
+        </div>
+    </header>
+
+    <!-- Seção de Produtos -->
+    <main>
+        <section id="produtos">
+            <h2>Nossos Produtos</h2>
+
+            <!-- Produto 1 -->
+            <article class="produto">
+                <img src="produto1.jpg" alt="Imagem do Produto 1" loading="lazy">
+                <h3>Produto 1</h3>
+                <p>Produto ideal para o seu dia a dia. Design compacto e eficiente.</p>
+                <button>Comprar Agora</button>
+            </article>
+
+            <!-- Produto 2 -->
+            <article class="produto">
+                <img src="produto2.jpg" alt="Imagem do Produto 2" loading="lazy">
+                <h3>Produto 2</h3>
+                <p>Alta qualidade e durabilidade. Ideal para quem busca confiabilidade.</p>
+                <button>Comprar Agora</button>
+            </article>
+
+            <!-- Produto 3 -->
+            <article class="produto">
+                <img src="produto3.jpg" alt="Imagem do Produto 3" loading="lazy">
+                <h3>Produto 3</h3>
+                <p>Produto com excelente custo-benefício. Perfeito para todas as ocasiões.</p>
+                <button>Comprar Agora</button>
+            </article>
+
+            <!-- Produto 4 -->
+            <article class="produto">
+                <img src="produto4.jpg" alt="Imagem do Produto 4" loading="lazy">
+                <h3>Produto 4</h3>
+                <p>Inovação e praticidade em um só produto. Feito para facilitar a sua vida.</p>
+                <button>Comprar Agora</button>
+            </article>
+
+            <!-- Produto 5 -->
+            <article class="produto">
+                <img src="produto5.jpg" alt="Imagem do Produto 5" loading="lazy">
+                <h3>Produto 5</h3>
+                <p>Elegância e funcionalidade. Ideal para quem preza por um estilo moderno.</p>
+                <button>Comprar Agora</button>
+            </article>
+
+            <!-- Produto 6 -->
+            <article class="produto">
+                <img src="produto6.jpg" alt="Imagem do Produto 6" loading="lazy">
+                <h3>Produto 6</h3>
+                <p>Alta performance e tecnologia de ponta. Para quem não abre mão de qualidade.</p>
+                <button>Comprar Agora</button>
+            </article>
+        </section>
+    </main>
+
+    <!-- Modal de Oferta Especial -->
+    <aside id="modal" class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+        <div class="modal-conteudo">
+            <button class="fechar" aria-label="Fechar Modal" onclick="fecharModal()">&times;</button>
+            <h2 id="modalTitle">Oferta Especial</h2>
+            <p id="modalDescription">Aproveite 20% de desconto em toda a loja! Essa oferta é por tempo limitado.</p>
+            <button>Saiba Mais</button>
+        </div>
+    </aside>
+
+    <!-- Rodapé da Página -->
+    <footer>
+        <div class="footer-content">
+            <!-- Seção de Links Úteis -->
+            <div class="footer-links">
+                <h4>Links Úteis</h4>
+                <ul>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Serviço</a></li>
+                </ul>
+            </div>
+
+            <!-- Seção de Redes Sociais -->
+            <div class="footer-social">
+                <h4>Siga-nos</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="./facebook-icon.png" alt="Facebook" /></a>
+                    <a href="#"><img src="./instagram-icon.png" alt="Instagram" /></a>
+
+                </div>
+            </div>
+        </div>
+        <!-- Botão de WhatsApp Fixo -->
+        <a href="https://wa.me/YOUR_PHONE_NUMBER?text=Olá, gostaria de mais informações!" class="whatsapp-btn"
+            target="_blank" aria-label="Converse conosco no WhatsApp">
+            <img src="./whatsapp_2504957.png" alt="WhatsApp">
+        </a>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nossa Loja. Todos os direitos reservados.</p>
+            <p><a href="#produtos">Voltar ao topo</a></p>
+        </div>
+    </footer>
+
+
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
